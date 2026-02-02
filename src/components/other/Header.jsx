@@ -1,0 +1,35 @@
+import React, { useContext } from 'react'
+import { AuthContext } from '../../context/AuthProvider'
+
+const Header = (props) => {
+  // 1. Pull the setUserData function from Context
+  const [userData, setUserData] = useContext(AuthContext)
+
+  const handleLogout = () => {
+    // 1. Remove the session key
+    localStorage.setItem('loggedInUser', '')
+    props.changeUser('')
+    
+    // 3. FORCE A RELOAD
+    // This is the most reliable way to clear the AuthContext 
+    // memory so the next user starts at zero.
+    // window.location.reload()
+}
+  const displayName = props.data?.firstName || "Admin"
+
+  return (
+    <div className='flex items-end justify-between'>
+        <h1 className='text-2xl font-medium'>Hello <br /> 
+          <span className='text-3xl font-semibold'>{displayName} 👋</span>
+        </h1>
+        <button 
+          onClick={handleLogout} 
+          className='bg-[#93032E] text-lg font-medium text-white px-5 py-2 rounded-sm'
+        >
+          Log Out
+        </button>
+    </div>
+  )
+}
+
+export default Header
