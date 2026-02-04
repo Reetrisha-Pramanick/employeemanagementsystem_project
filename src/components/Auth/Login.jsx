@@ -29,7 +29,7 @@ const Login = ({handleLogin}) => {
                     setPassword(e.target.value)
                 }}
                 required className='outline-none border-2 border-emerald-600 mt-4 text-xl py-3 px-5 rounded-full placeholder:text-gray-400'type="password" placeholder='Enter password' />
-                <button className='text-white outline-none border-2 border-emerale-500 bg-black-600 mt-7 text-xl py-3 px-5 rounded-full placeholder:text-white'>Log in</button>
+                <button className='text-white outline-none border-2 border-emerale-500 bg-black-600 mt-7 text-xl py-3 px-5 rounded-full placeholder:text-white cursor-pointer'>Log in</button>
             </form>
         </div>
     </div>

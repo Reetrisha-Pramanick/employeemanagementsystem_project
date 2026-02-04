@@ -43,7 +43,7 @@ const AcceptTask = ({ data }) => {
 }
 
   return (
-    <div className='flex-shrink-0 h-full w-[300px] p-5 bg-red-400 rounded-xl'>
+    <div className='flex-shrink-0 h-full w-[300px] p-5 bg-[#004643] rounded-xl'>
       <div className='flex justify-between items-center'>
         <h3 className='bg-red-600 text-sm px-3 py-1 rounded'>{data.category}</h3>
         <h4 className='text-sm'>{data.date}</h4>
@@ -54,14 +54,12 @@ const AcceptTask = ({ data }) => {
       <div className='flex justify-between mt-6'>
         <button 
           onClick={() => handleUpdateStatus('completed')}
-          className='bg-green-500 rounded font-medium py-1 px-2 text-xs cursor-pointer'
-        >
+          className='bg-green-500 rounded font-medium py-1 px-2 text-xs cursor-pointer'>
           Mark as Completed
         </button>
         <button 
           onClick={() => handleUpdateStatus('failed')}
-          className='bg-red-500 rounded font-medium py-1 px-2 text-xs cursor-pointer'
-        >
+          className='bg-red-500 rounded font-medium py-1 px-2 text-xs cursor-pointer'>
           Mark as Failed
         </button>
       </div>
