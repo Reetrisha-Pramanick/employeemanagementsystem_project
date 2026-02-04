@@ -73,8 +73,13 @@ const CreateTask = () => {
                 value = {assignTo}
                 onChange={(e)=>{
                     setassignTo(e.target.value)
-                }}>
+                }}
+                className= 'text-sm py-2 px-3 w-4/5 rounded outline-none border border-gray-400 mb-4 bg-zinc-800 text-white focus:border-green-500'
+                >
                     <option value="">Select whom to assign to:</option>
+                    {userData.map((emp) => (
+                        <option key = {emp.firstName}value={emp.firstName}>{emp.firstName}</option>
+                    ))}
                 </select>
                 </div>
                <div>
