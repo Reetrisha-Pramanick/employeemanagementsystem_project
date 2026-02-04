@@ -73,7 +73,9 @@ const CreateTask = () => {
                 value = {assignTo}
                 onChange={(e)=>{
                     setassignTo(e.target.value)
-                }}></select>
+                }}>
+                    <option value="">Select whom to assign to:</option>
+                </select>
                 </div>
                <div>
                 <h3 className='text-sm text-gray-300 mb-0.5'>Category</h3>
