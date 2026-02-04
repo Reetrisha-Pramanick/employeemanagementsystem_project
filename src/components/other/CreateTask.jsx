@@ -69,21 +69,29 @@ const CreateTask = () => {
                 </div>
                 <div>
                     <h3 className='text-sm text-gray-300 mb-0.5'>Assign to</h3>
-                <input
+                <select
                 value = {assignTo}
                 onChange={(e)=>{
                     setassignTo(e.target.value)
-                }}
-                className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4" type="text" placeholder='Employee name' />
+                }}></select>
                 </div>
                <div>
                 <h3 className='text-sm text-gray-300 mb-0.5'>Category</h3>
-                <input 
+                <select 
                 value = {category}
                 onChange={(e)=>{
                     setcategory(e.target.value)
                 }}
-                className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4" type="text" placeholder='Design,Dev,etc' />
+                className='text-sm py-2 px-3 w-4/5 rounded outline-none border border-gray-400 mb-4 bg-zinc-800 text-white focus:border-green-500'
+                >
+                    <option value="">Select Category</option>
+                    <option value="Design">Design</option>
+                    <option value="Dev">Dev</option>
+                    <option value="Testing/QA">Testing/QA</option>
+                    <option value="Bug Fix">Bug Fix</option>
+                    <option value="Documentation">Documentation</option>
+                    <option value="Research/Analysis">Research/Analysis</option>
+                </select>
                 </div>
                 </div>
                 <div className='w-2/5 flex flex-col items-start'>
