@@ -56,7 +56,7 @@ const CreateTask = () => {
                 onChange={(e)=>{
                     setTitle(e.target.value)
                 }}
-                className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4" type="text"placeholder='Make a UI Design' />
+                className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4 focus:border-green-500" type="text"placeholder='Make a UI Design' />
                 </div>
                     <div>
                     <h3 className='text-sm text-gray-300 mb-0.5'>Date</h3>
@@ -65,7 +65,7 @@ const CreateTask = () => {
                 onChange={(e)=>{
                     setDate(e.target.value)
                 }}
-                className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4" type="date" />
+                className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4 focus:border-green-500" type="date" />
                 </div>
                 <div>
                     <h3 className='text-sm text-gray-300 mb-0.5'>Assign to</h3>
